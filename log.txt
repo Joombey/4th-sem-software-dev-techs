@@ -1,0 +1,41 @@
+commit e8b287667203394aff975bd8e8c6ba76987b8f64
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Sat Feb 19 00:29:49 2022 +0300
+
+    исправлены последние баги по отображению неправильных чисел и изменеы местами кнопки стирания и показа результата
+
+commit a027b9cd9502bf96ada99b4be0ccdaabf884c488
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Fri Feb 18 23:41:17 2022 +0300
+
+    Оптимизирована функция подсчёта
+
+commit a43067f2de6ee6e7125e9fd8a5145b71e4ea4544
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Fri Feb 18 22:26:12 2022 +0300
+
+    Добавлена кнопка очистки
+
+commit ceeba96c195d09e90cc06e0f9bc8de8ec6d88929
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Fri Feb 18 20:29:20 2022 +0300
+
+    Исправлены ошибки из-за которых программа не запускалась
+
+commit 8d72284c3d8b77fa78bfe72c946b6f16d4263dcf
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Fri Feb 18 19:26:39 2022 +0300
+
+    были добавлены функции обработки кнопок
+
+commit 1023acf74dcd542ff4a822b661216e7229663a74
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Tue Feb 15 19:38:44 2022 +0300
+
+    Программный код был переписан на Объектноориентированный лад
+
+commit 064a023ec1cf2bc569579a56ecbde52849d09029
+Author: Farukh Rakhmatullaev <joombey@yandex.ru>
+Date:   Tue Feb 15 18:49:16 2022 +0300
+
+    создана генерация интерфейса и расставление его компонентов

@@ -1,11 +1,11 @@
 import tkinter as tk
-from re import findall
+from functools import partial
 
 class Calc:
     def __init__(self) -> None:
         self.window = tk.Tk()
-
-        self.btnArr = [tk.Button(self.window, text = str(x), command = lambda: self.event(str(x))) for x in range(10)]
+        
+        self.btnArr = [tk.Button(self.window, text = x, command = partial(self.event, str(x))) for x in range(10)]
         self.btnArr.append(tk.Button(self.window, text = "+", command = lambda: self.event("+")))
         self.btnArr.append(tk.Button(self.window, text = "-", command = lambda: self.event("-")))
         self.btnArr.append(tk.Button(self.window, text = "=", command = lambda: self.event("=")))
@@ -22,14 +22,8 @@ class Calc:
             for c in range(4):
                 self.btnArr[index].grid(column = c, row = 1 + r, sticky = "wens")
                 index +=1
-        self.btnArr[-2].grid(column = 4, row = 0, sticky = "wens", rowspan = 1)
-        self.btnArr[-1].grid(column = 4, row = 1, sticky = "wens", rowspan = 2)
-    
-    def __calc__(self, operation):
-        operation_counter = [i for i, x in enumerate(operation) if x == "+" or x == "-"]
-        print(eval(operation))
-        self.entry.delete(0, tk.END)
-        self.entry.insert(tk.END, 1)
+        self.btnArr[-2].grid(column = 4, row = 2, sticky = "ns", rowspan = 2)
+        self.btnArr[-1].grid(column = 4, row = 0, sticky = "ns", rowspan = 2)
 
     def event(self, operand):
         if operand != "=":

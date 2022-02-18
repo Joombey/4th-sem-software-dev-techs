@@ -27,27 +27,17 @@ class Calc:
     
     def __calc__(self, operation):
         operation_counter = [i for i, x in enumerate(operation) if x == "+" or x == "-"]
-        number = int(operation[0 : operation_counter[0]])
-        """while True:
-            if(opera)
-            elif(operation[operation_counter[i]] == "+"):
-                number += int(operation[operation_counter[i] + 1 : operation_counter[i + 1]])
-            elif(operation[operation_counter[i]] == "-"):
-                number -= int(operation[operation_counter[i] + 1 : operation_counter[i + 1]])"""
-        for i in range(len(operation_counter) - 1):
-            if(operation[operation_counter[i]] == "+"):
-                print(1)
-                number += int(operation[operation_counter[i] + 1 : operation_counter[i + 1]])
-            elif(operation[operation_counter[i]] == "-"):
-                number -= int(operation[operation_counter[i] + 1 : operation_counter[i + 1]])
+        print(eval(operation))
         self.entry.delete(0, tk.END)
-        self.entry.insert(tk.END, number)
+        self.entry.insert(tk.END, 1)
 
     def event(self, operand):
         if operand != "=":
             self.entry.insert(tk.END, operand)
         else:
-            self.__calc__(self.entry.get())
+            equation = self.entry.get()
+            self.entry.delete(0, tk.END)
+            self.entry.insert(0, eval(equation))
 
     def main(self):
         self.setButtonPos()
